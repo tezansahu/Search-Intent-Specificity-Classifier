@@ -1,9 +1,9 @@
-# Literature Review for Search Intent Specificity Classifier Project
+# Search Intent Specificity Classifier
 
-## Notes from References
+## Literature Review
 
-1. [Gary Marchionini, _EXPLORATORY SEARCH: FROM FINDING TO UNDERSTANDING_](https://dl.acm.org/doi/fullHtml/10.1145/1121949.1121979):
-    - Lookup vs Exploratory (Learn + Investigate) Search [Diagram]
+1. [Gary Marchionini, _Exploratory Search: From Finding to Understanding_](https://dl.acm.org/doi/fullHtml/10.1145/1121949.1121979):
+    - Lookup vs Exploratory (Learn + Investigate) Search [Diagram showing proposed model for identifying search intent specificity]
     - Lookup - _fast retrieval_ or _question answering_
     - Exploratory intent searches, may require strong human participation to support user with continuous & exploratoy process
     - Early techniques for relevance feedback for Exploratory Intent: 
@@ -237,9 +237,9 @@
 ## Comments & Thoughts
 
 - It would be good to explicitly mention that duration during which our data was collected & some specifics about the log files while writing about the Data Preparation
-
 - It will be worth mentioning the differences between traditional IR systems & Web searching to highlight the segment that we are trying to address (web search).
-
 - We can perhaps use the datasets mentioned in papers [12] & [13] above for testing our models as follows:
     - _Navigational (or homepage-finding)_ & _Transactional_ queries could be considered as _lookup_
     - _Informational (or topic-relevance)_ queries could be considered as _exploratory_
+
+## Code [unreleased yet]
