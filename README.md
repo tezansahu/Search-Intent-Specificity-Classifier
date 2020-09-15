@@ -11,6 +11,7 @@
         - _dynamic query_ interfaces (use mouse actions) - Dynamic Home Finder, SpotFire, TreeMaps, etc
     - __Relation Browser (RB)__ - facilitate exploration of the relationships  between  (among)  different  data  facets,  display alternative  partitions  of  the  database  with  mouse actions,  and  serve  as  an  alternative  to  existing search and  navigation  tools
 
+
 2. [**Doug Downey, Susan Dumais, Dan Liebling, Eric Horvitz, _Understanding the Relationship between Searchers’ Queries and Information Goals_**](https://dl.acm.org/doi/abs/10.1145/1458082.1458143):
     - Describes how user behavior varies across _common_ & _rare_ search queries
     - Queries & URLs can be modeled using a _heavy-tailed Zipf distribution_
@@ -23,6 +24,7 @@
     - Session begins with a search query and ends according to a subset  of  the  criteria  used  by  [White  and  Drucker](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/whitewww2007.pdf)
     - TaskDifficulty = - log<sub>2</sub>( P(goal URL) ) , where P(goal URL) = freq. of URL satisfying the user's gol, expressed as probability
     - Users  can  achieve  greater success in search if they utilize more general queries than their goal, and navigate to their goal page.
+
 
 3. [**Michael Bendersky, W. BruceCroft, _Analysis of Long Queries in a Large Scale Search Log_**](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.323.7444&rep=rep1&type=pdf)
     - [TREC corpora](https://trec.nist.gov/data/kba.html) used for analysis
@@ -38,10 +40,12 @@
     - _Operator_ type queries have higher abandonment rate (due to Boolean nature)
     - _Question_ type queries have lower abandonment rate (users find partially plausible answers)
 
+
 4. [**Daniel Hienert, Matthew Mitsui, Philipp Mayr, Chirag Shah, Nicholas J. Belkin, _The Role of the Task Topic in  Web Search of Different Task Types_**](https://arxiv.org/ftp/arxiv/papers/1808/1808.06813.pdf)
     - Large number of session variables defined based on _task type_ for experiment
     - Session variabes depend heavily on _task topic_, rather than simply  on _task type_.
     - _Topic familiarity_ had an overall weak effect on the _number of bookmarks_ and a nearly moderate effect on _query length_
+
 
 5. [**Emilie Palagi, Fabien Gandon, Raphaël Troncy, Alain Giboin, _A Survey of Definitions and Models of Exploratory Search_**](http://www.eurecom.fr/en/publication/5165/download/data-publi-5165.pdf)
     - Exploratory searching behavior is similar to _information foraging_ (move from one information patch to another based on _infomration scent_) or _berrypicking_
@@ -55,6 +59,7 @@
         - multifaceted
     - __Marchionini’s model:__ Proposes a set of activities related to ES &   highlighted those associated to exploration(learn and investigate) or lookup.
     - __Ellis' model:__ Descries 6 major characteristics of information-seeking patterns in relation to retrieval systems
+
 
 6. [**Carolyn Theresa Hafernik, Bernard J. Jansen, _Understanding the Specificity of Web Search Queries_**]()
     - 2 factors of specificity investigated:
@@ -71,6 +76,7 @@
         - number & additional items
         - name & additional items
 
+
 7. [**Bernard J. Jansen, Udo Pooch, _A review of Web searching studies and a framework for future research_**](https://onlinelibrary.wiley.com/doi/epdf/10.1002/1097-4571%282000%299999%3A9999%3C%3A%3AAID-ASI1607%3E3.0.CO%3B2-F):
     - A _Web-searching study_ focuses on isolating searching characteristics of searchers using a Web IR system via analysis of data, typically gathered from transaction logs
     - Extensive review and analysis ofcurrent Web-searching studies
@@ -82,6 +88,7 @@
         | Use of advanced features | 9% | 9% |
         | Use of Boolean | 8% | 37% |
         | Failure rate | 10% | 17% |
+
 
 8. [**Kumaripaba Athukorala, Dorota Głowacka, Giulio Jacucci, Antti Oulasvirta, Jilles Vreeken, _Is Exploratory Search Different? A Comparison of Information Search Behavior for Exploratory and Lookup Tasks_**](https://asistdl.onlinelibrary.wiley.com/doi/epdf/10.1002/asi.23617):
     - The most distinctive indicators that characterize exploratory search behaviors are query length, maximum scroll depth, & task completion time in _IR searching_
@@ -96,6 +103,7 @@
         - Exploratory tasks have greater scroll depths -> future search interface should show a longer list of items in the first SERP
         - search interface that automatically increases the snippet length for exploratory search task
 
+
 9. [**Anne Aula, Rehan M. Khan and Zhiwei Guan, _How does Search Behavior Change as Search Becomes More Difficult?_**](https://www.researchgate.net/publication/221516065_How_does_Search_Behavior_Change_as_Search_Becomes_More_Difficult):
     - Rather than studying successful  strategies, here the focus is on failures (behavioral changes when having difficulty in finding   information)
     - Focus on _closed informational search task_
@@ -107,6 +115,7 @@
     - Other indicators of struggle for desired information:
         - scrolling up & down in a random fashion
         - revisiting pages they already visited
+
 
 10. [**Kumaripaba Athukorala, Antti Oulasvirta, Dorota Głowacka, Jilles Vreeken, Giulio Jacucci, _Narrow or Broad? Estimating Subjective Specificity in Exploratory Search_**](https://eda.mmci.uni-saarland.de/pubs/2014/foraging-atukorala,oulasvirta,glowacka,vreeken,jaccuci.pdf):
     - Formalized a model that relies only on click data only to infer specificity of user queries 
@@ -136,6 +145,7 @@
             - Summarize results with possible visualizations
         - Substitute for relevance feedback technique
 
+
 11. [**Uchin Lee, Zhenyu Liu, Junghoo Cho, _Automatic Identification of User Goals in Web Search_**](http://oak.cs.ucla.edu/~cho/papers/cho-usergoal.pdf):
     - Thee goal of a user can be classified into at least two categories: 
         - _Navigational_ (user has a particular Web page in mind and is primarily interested in visiting the page)
@@ -151,6 +161,7 @@
             - Practical concerns: _link spams_ & _mirror sites_
     - Benchmark Queries: 50 most popular queries issued to Google from the UCLA Computer Science Department
     - Using a classifier boundary `f = 1 * (median of click distribution) + 1 * (median of anchor-link distribution)` , __90%  accuracy__ is obtained
+
 
 12. [**In-Ho Kang, GilChang Kim, _Query Type Classification for Web Document Retrieval_**](https://www.cs.cmu.edu/~ihkang97/papers/query_type.pdf):
     - User queries can be classified into 3 categories:
@@ -177,6 +188,7 @@
         - Usage Rate as an Anchor Text (if query terms appear in titles and anchor texts frequently, this tells the category of a given query is the homepage finding task)
         - Part of Speech (topic-relevance tasks generally include verbs, while homepage-finding tasks usually have proper names)
     - Using all 4 features gave the best classification results, with __91.7% precision__ & __61.5% recall__ on the test sets
+
 
 13. [**Mauro Rojas Herrera, Edleno Silva de Moura a, Marco Cristo, Thomaz Philippe Silva, Altigran Soares da Silva, _Exploring features for the automatic identification of user goals in web search_**]():
     - __Problem statement addressed:__ Given a set of n queries `Q = {q1; q2; ... ; qn}`, where each query `qi` is represented by a set of `m` features, i.e., `qi = {f1; f2; ... ; fm}` and a taxonomy, (a fixed set of `t` categories) `C = {c1; c2; ... ; ct}`, learn a classifier tha maps queries to their categories.
