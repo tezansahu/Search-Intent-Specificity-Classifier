@@ -23,14 +23,14 @@
         - specialized queries become longer
         - longer queries are less frequent
     - Session begins with a search query and ends according to a subset  of  the  criteria  used  by  [White  and  Drucker](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/whitewww2007.pdf)
-    - TaskDifficulty = - log<sub>2</sub>( P(goal URL) ) , where P(goal URL) = freq. of URL satisfying the user's gol, expressed as probability
+    - TaskDifficulty = \\(- log<sub>2</sub>( P(goal URL) ) \\), where \\(P(goal URL) =\\) freq. of URL satisfying the user's gol, expressed as probability
     - Users  can  achieve  greater success in search if they utilize more general queries than their goal, and navigate to their goal page.
 
 ***
 
 3. [Michael Bendersky, W. BruceCroft, _Analysis of Long Queries in a Large Scale Search Log_](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.323.7444&rep=rep1&type=pdf)
     - [TREC corpora](https://trec.nist.gov/data/kba.html) used for analysis
-    - Why to study _long_ queries [5 <= len(query) <= 12]:
+    - Why to study _long_ queries [\\(5 \leq len(query) \leq 12 \\)]:
         - Better way to represent complex & specifc information  requirements
         - Existing retrieval methods perform worse for the long queries than for the short ones
     - Types of long queries:
@@ -90,7 +90,7 @@
         | :---: | :---: | :---: |
         | Session length | 1-2 | 7-16 |
         | Query length | 2 | 6-9 |
-        | Relevant documents viewed per session | <=10 | ~ 10 |
+        | Relevant documents viewed per session | \\( \leq 10 \\) | ~ 10 |
         | Use of advanced features | 9% | 9% |
         | Use of Boolean | 8% | 37% |
         | Failure rate | 10% | 17% |
@@ -137,9 +137,9 @@
       
       | Query Specificity | Model | Fit (R<sup>2</sup>) |
       | :---: | :---: | :---: |
-      | Broad | 3.83 ln(n) - 3.59 | 0.97 |
-      | Intermediate | 2.40 ln(n) - 2.06 | 0.97 |
-      | Narrow | 2.05 ln(n) - 1.96 | 0.97 |
+      | Broad | \\( 3.83 ln(n) - 3.59 \\) | 0.97 |
+      | Intermediate | \\( 2.40 ln(n) - 2.06 \\) | 0.97 |
+      | Narrow | \\( 2.05 ln(n) - 1.96 \\) | 0.97 |
 
     -  Gradient of Seen–Clicked curve decreases (IG decreases) as the results become narrower for the user's information need
     - Also trained __C4.5 Desision tree__ (10-fold cross validation)
@@ -240,6 +240,6 @@
 
 - It will be worth mentioning the differences between traditional IR systems & Web searching to highlight the segment that we are trying to address (web search).
 
-- We can perhaps use the datasets mentioned in papers [11] & [12] above for testing our models as follows:
+- We can perhaps use the datasets mentioned in papers [12] & [13] above for testing our models as follows:
     - _Navigational (or homepage-finding)_ & _Transactional_ queries could be considered as _lookup_
     - _Informational (or topic-relevance)_ queries could be considered as _exploratory_
