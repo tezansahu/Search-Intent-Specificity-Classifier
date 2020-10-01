@@ -233,7 +233,7 @@
             - Create an embedding matrix for each product using _Matrix Factorization_ on top of user-product clicks
             -  For query _q_ & Recall set _R = P<sub>1</sub>, ..., P<sub>n</sub>_, centroid _R<sub>c</sub>_ & coherence score _c<sub>qR</sub>_ are defined
             - _R<sub>c</sub> = (P<sub>1</sub> + ... + P<sub>n</sub>) / n_
-            - _c<sub>qR</sub> = median{p<sub>i</sub>> . R<sub>c</sub>}_ [Median of inner product of each query with centroid of all products]
+            - _c<sub>qR</sub> = median{<p<sub>i</sub> . R<sub>c</sub>>}_ [Median of inner product of each query with centroid of all products]
             - Typically, large recall set (borad queries) lead to smaller coherency scores
         - Word2Vec encodings
         - Query features (length, number of words, etc.)
