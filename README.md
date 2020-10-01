@@ -222,6 +222,25 @@
             - SVM using all features __except__ terms, density of anchor domains, anchor text frequency , match b/w query & domain
             - __79.18 Precision__ & __79.18 Recall__
 
+14. [**Siddhartha Devapujula, Sagar Arora, Sumit Borar, _Learning to Rank Broad and Narrow Queries in E-Commerce_**](https://arxiv.org/pdf/1907.01549.pdf):
+    - Learning to Rank (LETOR) model for e-commerce platform
+    - Typical traffic-query distribution is 90-10 (instead of 80-20)
+    - Broad queries are observed to have _high recall set_ while narrow queries have _low recall set_
+    - Randomly sampled 100k queries & manually labelled them as Broad/Narrow, & later spilt them into train & test data in the ratio 70:30
+    - Trained an __SVM-based classifier__ with __radial-basis kernel__
+    - Features used:
+        - Coherency score:
+            - Create an embedding matrix for each product using _Matrix Factorization_ on top of user-product clicks
+            -  For query _q_ & Recall set _R = P<sub>1</sub>, ..., P<sub>n</sub>_, centroid _R<sub>c</sub>_ & coherence score _c<sub>qR</sub>_ are defined
+            - _R<sub>c</sub> = (P<sub>1</sub> + ... + P<sub>n</sub>) / n_
+            - _c<sub>qR</sub> = median{p<sub>i</sub>> . R<sub>c</sub>}_ [Median of inner product of each query with centroid of all products]
+            - Typically, large recall set (borad queries) lead to smaller coherency scores
+        - Word2Vec encodings
+        - Query features (length, number of words, etc.)
+    - Manual labels were decided using a formula based on heuristics, primarily based on _coherency score_ (thresholded at _0.58_)
+    - __Accuracy of 0.812__ on test data
+    - On another sample of 10k queries, __accuracy was 0.89__ (beating baseline heuristic-based clssifier with accuracy 0.83)
+
 ## Comments & Thoughts
 
 - It would be good to explicitly mention that duration during which our data was collected & some specifics about the log files while writing about the Data Preparation
